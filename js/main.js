@@ -169,6 +169,26 @@ const cursosFallback = [
         ],
         googleClassroomUrl: "https://classroom.google.com/c/XXXXX",
         estado: "activo"
+    },
+    {
+        id: "ingles-general", titulo: "Inglés General (A1-B2)",
+        categoria: "idiomas", categoriaLabel: "Idiomas",
+        nivel: "Básico → Intermedio", nivelClase: "basico",
+        duracion: "30 horas", modulosTotales: 6, quizzesTotales: 12,
+        icono: "fa-language", iconoColor: "#E91E63", color: "#E91E63",
+        descripcionCorta: "Aprende inglés desde cero hasta nivel intermedio. Gramática, vocabulario, conversación y comprensión auditiva.",
+        descripcionCompleta: "Curso integral de inglés que te lleva desde nivel principiante (A1) hasta intermedio (B2). Incluye gramática estructurada, vocabulario práctico, ejercicios de conversación, comprensión auditiva con materiales reales, y práctica de escritura. Ideal para profesionales que necesitan inglés en el ámbito laboral.",
+        requisitos: ["No se requiere conocimiento previo de inglés", "Computadora con micrófono (para ejercicios de pronunciación)", "Acceso a internet"],
+        modulos: [
+            { titulo: "A1 — Fundamentos: Saludos, Presentaciones y Vocabulario Básico", duracion: "5 horas" },
+            { titulo: "A1-A2 — Gramática Esencial: Presente Simple, Artículos, Pronombres", duracion: "5 horas" },
+            { titulo: "A2 — Vida Cotidiana: Compras, Direcciones, Rutinas", duracion: "5 horas" },
+            { titulo: "A2-B1 — Gramática Intermedia: Tiempos Verbales, Condicionales", duracion: "5 horas" },
+            { titulo: "B1 — Conversación y Comprensión: Diálogos, Listening, Speaking", duracion: "5 horas" },
+            { titulo: "B1-B2 — Inglés Profesional: Emails, Presentaciones, Vocabulario Técnico", duracion: "5 horas" }
+        ],
+        googleClassroomUrl: "https://classroom.google.com/c/XXXXX",
+        estado: "activo"
     }
 ];
 
@@ -269,7 +289,7 @@ function crearTarjetaCurso(curso) {
             <div class="course-footer">
                 <span class="level-badge level-${curso.nivelClase}">${curso.nivel}</span>
                 ${estadoBadge}
-                <button class="course-btn" onclick="abrirModal('${curso.id}')">
+                <button class="course-btn" onclick="window.location.href='cursos/curso.html?id=${curso.id}'">
                     Ver Curso <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
